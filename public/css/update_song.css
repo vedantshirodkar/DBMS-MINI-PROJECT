@@ -1,9 +1,6 @@
-/* 🎵 TuneVault | Update Song – Darker Pink→Cyan Theme */
-
-/* ---------- Base ---------- */
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #f8bbd0, #80deea); /* darker pink→cyan */
+  background: linear-gradient(135deg, #f8bbd0, #80deea);
   margin: 0;
   padding: 24px;
   color: #222;
@@ -16,7 +13,7 @@ body {
 .main-artist-label {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #d81b60; /* rich pink-maroon tone */
+  color: #d81b60;
   background: linear-gradient(90deg, rgba(236, 64, 122, 0.15), rgba(0, 172, 193, 0.1));
   padding: 4px 10px;
   border-radius: 6px;

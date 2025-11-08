@@ -5,13 +5,14 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import db from "./databases/db.js";
 
-// Import routes
+// ---------- Import Routes ----------
 import artistsRouter from "./routes/artists.js";
 import rusongsRouter from "./routes/rusongs.js";
 import upsongsRouter from "./routes/upsongs.js";
 import songsViewRouter from "./routes/songs_view.js";
 import albumsRouter from "./routes/albums.js";
 import albumsViewRouter from "./routes/albums_view.js";
+import delsongsRouter from "./routes/delsongs.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +26,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
+// ---------- API Routes ----------
 app.get("/api/songs/count", async (req, res) => {
   try {
     const [results] = await db.query("SELECT COUNT(*) AS total FROM songs");
@@ -35,13 +37,13 @@ app.get("/api/songs/count", async (req, res) => {
   }
 });
 
-// ---------- API Routes ----------
 app.use("/artists", artistsRouter);
 app.use("/rusongs", rusongsRouter);
 app.use("/upsongs", upsongsRouter);
 app.use("/songs", songsViewRouter);
 app.use("/api/albums", albumsRouter);
 app.use("/api/albums", albumsViewRouter);
+app.use("/delsongs", delsongsRouter);
 
 // ---------- Static Page Routes ----------
 app.get("/", (req, res) => {
@@ -70,6 +72,10 @@ app.get("/rusongs/register", (req, res) => {
 
 app.get("/upsongs/update", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "update_song.html"));
+});
+
+app.get("/delsongs/delete", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "delete_songs.html"));
 });
 
 app.get("/albums", (req, res) => {

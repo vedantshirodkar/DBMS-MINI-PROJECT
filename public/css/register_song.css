@@ -1,6 +1,3 @@
-/* 🎶 TuneVault | Register Song – Modern Pink–Cyan Theme */
-
-/* ---------- Base ---------- */
 body {
   font-family: "Poppins", Arial, sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #fce4ec);
@@ -15,7 +12,7 @@ body {
 
 .note {
   font-size: 0.8rem;
-  color: #800000;            /* pure maroon hex */
+  color: #800000;
   margin: 4px 0 8px 4px;
   font-style: italic;
   letter-spacing: 0.2px;

@@ -5,18 +5,24 @@ CREATE TABLE artists (
   artist_id INT AUTO_INCREMENT PRIMARY KEY,
   artist_name VARCHAR(255) NOT NULL,
   song_id INT
+  FOREIGN KEY (song_id) REFERENCES songs(song_id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE lyricists (
   lyricist_id INT AUTO_INCREMENT PRIMARY KEY,
   lyricist_name VARCHAR(255) NOT NULL,
   song_id INT
+  FOREIGN KEY (song_id) REFERENCES songs(song_id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE producers (
   producer_id INT AUTO_INCREMENT PRIMARY KEY,
   producer_name VARCHAR(255) NOT NULL,
   song_id INT
+  FOREIGN KEY (song_id) REFERENCES songs(song_id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE main_artists (

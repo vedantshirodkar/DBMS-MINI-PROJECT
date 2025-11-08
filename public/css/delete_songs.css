@@ -1,0 +1,180 @@
+/* ---------- Global Styles ---------- */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #f8bbd0, #80deea);
+  margin: 0;
+  padding: 24px;
+  color: #222;
+  min-height: 100vh;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* ---------- Page Container ---------- */
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 36px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Header ---------- */
+header h1 {
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ec407a, #00acc1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ---------- Description ---------- */
+p.description {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* ---------- Delete Form ---------- */
+form#deleteForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 105, 180, 0.3);
+  box-shadow: 0 4px 10px rgba(79, 195, 247, 0.15);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#deleteForm input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  background: #fff;
+  width: 240px;
+  transition: 0.25s;
+}
+
+#deleteForm input:focus {
+  border-color: #ec407a;
+  box-shadow: 0 0 0 3px rgba(236, 64, 122, 0.25);
+  outline: none;
+}
+
+#deleteForm button {
+  background: linear-gradient(135deg, #ec407a, #00acc1);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#deleteForm button:hover {
+  background: linear-gradient(135deg, #ff4081, #0097a7);
+  transform: translateY(-2px);
+}
+
+/* ---------- Success/Error Modal ---------- */
+#resultModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+#resultModal .modal-content {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 90%;
+  animation: popIn 0.35s ease forwards;
+}
+
+#resultModal h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  background: linear-gradient(90deg, #4fc3f7, #ff6ec4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#resultModal p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.4rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-buttons button {
+  background: linear-gradient(90deg, #f06, #09f);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* ---------- Animations ---------- */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

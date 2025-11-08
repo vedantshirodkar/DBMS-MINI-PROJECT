@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Song | TuneVault</title>
+    <link rel="stylesheet" href="/css/delete_songs.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Delete a Song</h1>
+      </header>
+      <p class="description">
+        Enter the name of the song you want to delete from your collection.
+      </p>
+
+      <form id="deleteForm">
+        <input type="text" id="songName" placeholder="Enter Song Name" required/>
+        <button type="submit">Delete Song</button>
+      </form>
+    </main>
+
+    <!-- Modal -->
+    <div id="resultModal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Result</h2>
+        <p id="modalMessage"></p>
+        <div class="modal-buttons">
+          <button id="closeModal">OK</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/js/delete_songs.js"></script>
+  </body>
+</html>
