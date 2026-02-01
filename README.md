@@ -42,4 +42,4 @@ Future enhancements like:
 5. Digital certificate generation for verified music assets.
                           can be done to transform TuneVault from a personal music organizer into a legally backed copyright protection ecosystem for creators.
 
-Developed by: Swayam Kiran Prabhu
+Developed by: Swayam Kiran Prabhu and Vedant Sattain Shirodkar
